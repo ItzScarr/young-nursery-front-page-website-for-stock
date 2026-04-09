@@ -6,7 +6,7 @@
     <title>Youngs Nursery Stock</title>
 
     <!-- LINK TO CSS (IMPORTANT) -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
