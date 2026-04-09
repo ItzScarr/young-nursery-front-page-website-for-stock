@@ -1,134 +1,127 @@
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f4f4f0;
-        color: #2b2b2b;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f0;
+    color: #2b2b2b;
+}
 
-    /* NAVBAR */
-    header {
-        background: #3a5f2d;
-        color: white;
-        padding: 15px;
-        border-bottom: 4px solid #6b8e23;
-    }
+/* NAVBAR */
+header {
+    background: #3a5f2d;
+    color: white;
+    padding: 15px;
+    border-bottom: 4px solid #6b8e23;
+}
 
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    nav h1 {
-        margin: 0;
-        font-weight: normal;
-        letter-spacing: 1px;
-    }
+nav h1 {
+    margin: 0;
+}
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        margin: 0;
-    }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
 
-    nav ul li {
-        cursor: pointer;
-        transition: 0.2s;
-    }
+nav ul li {
+    cursor: pointer;
+}
 
-    nav ul li:hover {
-        color: #cddc39;
-    }
+nav ul li:hover {
+    color: #cddc39;
+}
 
-    /* HERO */
-    .hero {
-        background: linear-gradient(rgba(58,95,45,0.7), rgba(58,95,45,0.7)),
-                    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
-        background-size: cover;
-        background-position: center;
-        color: white;
-        padding: 100px 20px;
-        text-align: center;
-    }
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(58,95,45,0.7), rgba(58,95,45,0.7)),
+                url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
 
-    /* SECTIONS */
-    .container {
-        padding: 20px;
-    }
+/* CONTENT */
+.container {
+    padding: 20px;
+}
 
-    h2 {
-        border-left: 5px solid #6b8e23;
-        padding-left: 10px;
-    }
+h2 {
+    border-left: 5px solid #6b8e23;
+    padding-left: 10px;
+}
 
-    /* CARDS */
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-    }
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
 
-    .card {
-        background: #e8e5d9;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.2s;
-    }
+.card {
+    background: #e8e5d9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
 
-    .card:hover {
-        background: #dcd8c8;
-    }
+.card:hover {
+    background: #dcd8c8;
+}
 
-    /* TABLE */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-    }
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
 
-    th, td {
-        padding: 12px;
-        border-bottom: 1px solid #ddd;
-    }
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
 
-    th {
-        background: #3a5f2d;
-        color: white;
-    }
+th {
+    background: #3a5f2d;
+    color: white;
+}
 
-    /* STOCK COLORS */
-    .stock-high {
-        background: #4caf50;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
+/* STOCK COLORS */
+.stock-high {
+    background: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
-    .stock-medium {
-        background: #ffb300;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
+.stock-medium {
+    background: #ffb300;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
-    .stock-low {
-        background: #d32f2f;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
+.stock-low {
+    background: #d32f2f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
-    footer {
-        background: #3a5f2d;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-top: 30px;
-    }
-</style>
+/* FOOTER */
+footer {
+    background: #3a5f2d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
