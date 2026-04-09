@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youngs Nursery Stock System</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f7f4;
+    }
+
+    /* NAVBAR */
+    header {
+        background: #2e7d32;
+        color: white;
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav h1 {
+        margin: 0;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+    }
+
+    nav ul li {
+        cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+        background: url("https://images.unsplash.com/photo-plant") center/cover;
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        background-color: #4caf50;
+    }
+
+    /* SECTIONS */
+    .container {
+        padding: 20px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* TABLE */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: white;
+    }
+
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background: #2e7d32;
+        color: white;
+    }
+
+    /* STOCK COLORS */
+    .stock-high {
+        background: #4caf50;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .stock-medium {
+        background: #ff9800;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .stock-low {
+        background: #f44336;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    footer {
+        background: #2e7d32;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h1>Youngs Nursery</h1>
+        <ul>
+            <li>Plants</li>
+            <li>Seeds</li>
+            <li>Garden Care</li>
+            <li>Pots</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Welcome to Youngs Nursery</h2>
+    <p>Check stock instantly across the store</p>
+</section>
+
+<div class="container">
+
+    <h2>Categories</h2>
+    <div class="cards">
+        <div class="card">Plants</div>
+        <div class="card">Houseplants</div>
+        <div class="card">Seeds</div>
+        <div class="card">Garden Care</div>
+    </div>
+
+    <h2>Stock Table</h2>
+
+    <table id="stockTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Location</th>
+                <th>Stock Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example rows -->
+            <tr>
+                <td>Rose Plant</td>
+                <td>Aisle 3</td>
+                <td><span class="stock-high">Above Half</span></td>
+            </tr>
+            <tr>
+                <td>Compost Bag</td>
+                <td>Outdoor Yard</td>
+                <td><span class="stock-medium">Below Half</span></td>
+            </tr>
+            <tr>
+                <td>Tomato Seeds</td>
+                <td>Seed Rack</td>
+                <td><span class="stock-low">Out of Stock</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Youngs Nursery</p>
+</footer>
+
+<script>
+    // Function to add new rows dynamically later
+    function addItem(name, location, stock) {
+        const table = document.getElementById("stockTable").querySelector("tbody");
+
+        let stockClass = "";
+        let stockText = "";
+
+        if (stock === "high") {
+            stockClass = "stock-high";
+            stockText = "Above Half";
+        } else if (stock === "medium") {
+            stockClass = "stock-medium";
+            stockText = "Below Half";
+        } else {
+            stockClass = "stock-low";
+            stockText = "Out of Stock";
+        }
+
+        const row = `
+            <tr>
+                <td>${name}</td>
+                <td>${location}</td>
+                <td><span class="${stockClass}">${stockText}</span></td>
+            </tr>
+        `;
+
+        table.innerHTML += row;
+    }
+</script>
+
+</body>
+</html>
